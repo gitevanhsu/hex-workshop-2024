@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap");
+/* global */
+* {
+  font-family: "noto Sans", sans-serif;
+}
+
+/* header */
+header {
+  /* logo */
+  height: 96px;
+  .logo-box {
+    position: absolute;
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+    left: 312px;
+    top: 28px;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  /* nav */
+  nav {
+    padding: 32px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    .nav-item {
+      padding: 4px 8px;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+    .nav-item.active {
+      background: linear-gradient(to left, #919191, #919191) left top no-repeat,
+        linear-gradient(to bottom, #919191, #919191) left top no-repeat,
+        linear-gradient(to left, #919191, #919191) right top no-repeat,
+        linear-gradient(to bottom, #919191, #919191) right top no-repeat,
+        linear-gradient(to left, #919191, #919191) left bottom no-repeat,
+        linear-gradient(to bottom, #919191, #919191) left bottom no-repeat,
+        linear-gradient(to left, #919191, #919191) right bottom no-repeat,
+        linear-gradient(to left, #919191, #919191) right bottom no-repeat;
+      background-size: 1px 10px, 10px 1px, 1px 10px, 10px 1px;
+    }
+  }
+}
+
+/* containers */
+.container {
+  display: flex;
+}
+/* container1 */
+.container-1 {
+  gap: 24px;
+  .left {
+    width: 40%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    /* text */
+    .text-box {
+      max-width: 430px;
+      p.title {
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 600;
+        margin-bottom: 24px;
+        color: #3b3b3b;
+      }
+      p.content {
+        margin-bottom: 16px;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+        color: #5b5b5b;
+        span > img {
+          right: 0;
+          bottom: 0;
+          position: absolute;
+          z-index: -1;
+        }
+        br {
+          display: block;
+          content: "";
+          margin-top: 8px;
+        }
+      }
+      p.sub-content {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #c1c1c1;
+      }
+    }
+    /* icon */
+    .icon-box {
+      padding: 0;
+      margin-top: 60px;
+      list-style: none;
+      display: flex;
+    }
+  }
+  .right {
+    width: 60%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
