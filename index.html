@@ -6,25 +6,46 @@
     <title>Noel</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/index.js"></script>
   </head>
   <body>
-    <header>
+    <header class="desktop">
       <div class="logo-box"><img src="./img/logo.png" alt="logo" /></div>
-      <nav>
-        <div class="nav-item active">首頁</div>
-        <div class="nav-item">作品集</div>
-        <div class="nav-item">服務項目</div>
-        <div class="nav-item">部落格</div>
-        <div class="nav-item">聯絡我</div>
-      </nav>
+      <ul class="nav">
+        <li class="nav-item active">首頁</li>
+        <li class="nav-item">作品集</li>
+        <li class="nav-item">服務項目</li>
+        <li class="nav-item">部落格</li>
+        <li class="nav-item">聯絡我</li>
+      </ul>
+      <div class="logo-box"></div>
     </header>
+
+    <header class="mobile">
+      <div class="top">
+        <div class="logo-box"><img src="./img/logo.png" alt="logo" /></div>
+        <div class="icon-box">
+          <img src="./img/icon/x.svg" class="close hide" alt="x" />
+          <img src="./img/icon/burger.svg" class="burger" alt="x" />
+        </div>
+      </div>
+      <div class="cover hide"></div>
+      <ul class="nav hide">
+        <li class="nav-item active">首頁</li>
+        <li class="nav-item">作品集</li>
+        <li class="nav-item">服務項目</li>
+        <li class="nav-item">部落格</li>
+        <li class="nav-item">聯絡我</li>
+      </ul>
+    </header>
+
     <!-- container1 -->
     <div class="container container-1">
       <div class="left">
         <div class="text-box">
           <h1 class="title">Hi！我是 Noel</h1>
           <p class="content">
-            具有 10 年經驗的
+            具有 10 年經驗的<br class="mobile" />
             <span
               >資深 UI 設計師<img src="./img/homepage/mark.png" alt="mark"
             /></span>
@@ -32,8 +53,8 @@
             <span
               >前端工程師<img src="./img/homepage/mark.png" alt="mark"
             /></span>
-            <br />
-            技術雙修並行，熱衷於優化使用者的網頁體驗
+            <br class="desk" />
+            技術雙修並行，<br class="mobile" />熱衷於優化使用者的網頁體驗
           </p>
           <p class="sub-content">
             WEB DEVELOPMENT / BRANDING / UI / UX / APP DESIGN
@@ -52,9 +73,11 @@
         </div>
       </div>
       <div class="right">
-        <img src="./img/homepage/container-1.png" alt="hero" />
+        <img class="desktop" src="./img/homepage/hero-lg.png" alt="hero" />
+        <img class="mobile" src="./img/homepage/hero-sm.png" alt="hero" />
       </div>
     </div>
+
     <!-- container2 -->
     <div class="container container-2">
       <div class="title-box">
@@ -69,13 +92,13 @@
         </div>
       </div>
       <!-- work1 -->
+
       <div class="work-1">
         <img
           class="img-bg"
           src="./img/homepage/homepage-work1-bg.png"
           alt="work1-bg"
         />
-
         <div class="content content-1">
           <img src="./img/homepage/homepage-work1.png" alt="work1" />
           <div class="card">
@@ -93,6 +116,17 @@
             </button>
           </div>
         </div>
+      </div>
+
+      <div class="work-mobile">
+        <h3>星際旅行訂票平台</h3>
+        <p>悠遊宇宙的夢想，從這裡開始實現</p>
+        <ul>
+          <li>網頁設計</li>
+          <li>響應式設計</li>
+          <li>Bootstrap</li>
+        </ul>
+        <button>完整介紹 <img src="./img/icon/arrow.svg" alt="arrow" /></button>
       </div>
 
       <!-- work2 -->
@@ -121,6 +155,17 @@
         </div>
       </div>
 
+      <div class="work-mobile">
+        <h3>理財APP</h3>
+        <p>連動帳戶與行動支付，讓 AI 提供您最好的理財建議</p>
+        <ul>
+          <li>APP設計</li>
+          <li>iOS</li>
+          <li>React</li>
+        </ul>
+        <button>完整介紹 <img src="./img/icon/arrow.svg" alt="arrow" /></button>
+      </div>
+
       <!-- work3 -->
       <div class="work-3">
         <img
@@ -146,6 +191,17 @@
             </button>
           </div>
         </div>
+      </div>
+
+      <div class="work-mobile">
+        <h3>醫美診所官網</h3>
+        <p>永保青春的秘密，從粹究開始</p>
+        <ul>
+          <li>網頁設計</li>
+          <li>響應式設計</li>
+          <li>ＷordPress</li>
+        </ul>
+        <button>完整介紹 <img src="./img/icon/arrow.svg" alt="arrow" /></button>
       </div>
     </div>
 
@@ -252,7 +308,9 @@
           </div>
         </li>
       </ul>
-
+      <button class="mobile">
+        更多文章<img src="./img/icon/arrow.svg" alt="arrow" />
+      </button>
       <ul class="dots">
         <li class="dot active"></li>
         <li class="dot"></li>
@@ -263,7 +321,16 @@
     </div>
     <!-- footer -->
     <footer>
-      <img class="img-bg" src="./img/footer/footer-bg-lg.png" alt="footer-bg" />
+      <img
+        class="img-bg desktop"
+        src="./img/footer/footer-bg-lg.png"
+        alt="footer-bg"
+      />
+      <img
+        class="img-bg mobile"
+        src="./img/footer/footer-bg-sm.png"
+        alt="footer-bg"
+      />
       <div class="container">
         <div class="left">
           <img src="./img/logo.png" alt="logo" class="logo" />
