@@ -668,7 +668,9 @@ header.mobile {
     font-weight: 700;
     margin-bottom: 80px;
     flex-wrap: wrap;
-
+    @media screen and (width< 768px) {
+      font-size: 20px;
+    }
     li {
       width: 306px;
       height: 306px;
