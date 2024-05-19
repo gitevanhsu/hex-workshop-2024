@@ -64,8 +64,8 @@ br.mobile {
 
 /* work mobile */
 .work-mobile {
-  /* display: none; */
-  display: flex;
+  display: none;
+  /* display: flex; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -242,9 +242,11 @@ header.mobile {
 .container-1 {
   display: flex;
   gap: 24px;
+  height: 792px;
   @media screen and (width < 768px) {
     flex-direction: column;
     gap: 0;
+    height: auto;
   }
   & > .left {
     width: 40%;
@@ -342,7 +344,9 @@ header.mobile {
   /* work-1 */
   & > .work-1 {
     padding-top: 80px;
+    height: 800px;
     @media screen and (width < 768px) {
+      height: auto;
       padding: 93px 40px 0;
     }
     & > .img-bg {
@@ -362,9 +366,13 @@ header.mobile {
       align-items: center;
       gap: 55px;
       & > img {
-        max-width: 50%;
+        height: 100%;
+        @media screen and (width < 1296px) {
+          max-width: 50%;
+        }
         @media screen and (width < 768px) {
           max-width: 100%;
+          height: auto;
         }
       }
       & > .card {
@@ -436,7 +444,10 @@ header.mobile {
 
   /* work-2 */
   & > .work-2 {
-    /* height: 800px; */
+    height: 800px;
+    @media screen and (width < 768px) {
+      height: auto;
+    }
     & > .img-bg {
       left: 0;
       top: 0;
@@ -538,8 +549,10 @@ header.mobile {
   /* work3 */
   & > .work-3 {
     padding: 176px 0 112px;
+    height: 800px;
     @media screen and (width< 768px) {
       padding: 90px 40px;
+      height: auto;
     }
     & > .img-bg {
       left: 0;
@@ -692,6 +705,7 @@ header.mobile {
   & > .text-box {
     & > p {
       font-size: 28px;
+      line-height: 1.2;
       font-weight: 600;
       color: #3b3b3b;
       text-align: center;
